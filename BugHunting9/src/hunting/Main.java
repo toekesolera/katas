@@ -9,7 +9,7 @@ public class Main {
 				int ix = valOffset + j;
 				if (rgsToRead.length == ix) break;
 				if (!rgsToRead[ix]) continue;
-				val = val | (1 << j);
+				val = val | ((long)1 << j);
 			}
 			....
 		}
