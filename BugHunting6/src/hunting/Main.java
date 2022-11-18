@@ -5,7 +5,7 @@ public class Main {
 	public void putToCache(PutRecordsRequest putRecordsRequest)
 	{
 		....
-		if (dataTmpFile == null || !dataTmpFile.exists()) {
+		if (dataTmpFile == null && !dataTmpFile.exists()) {
 			try {
 				dataTmpFile.createNewFile();
 			}
