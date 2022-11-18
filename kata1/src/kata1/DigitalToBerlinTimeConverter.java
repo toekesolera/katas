@@ -35,7 +35,20 @@ public class DigitalToBerlinTimeConverter {
 		}
 		return fiveMinutesRow.toString();
 	}
-	
+
+	public String convertSingleHoursRow(int hoursRow) {
+		int numberOfRs = hoursRow % 5;
+        StringBuilder singleMinutesRow = new StringBuilder();
+        for (int i = 0; i < 4; i++) {
+        	if (numberOfRs > 0) {
+        		singleMinutesRow.append("R");
+        	} else {
+        		singleMinutesRow.append("O");
+        	}
+        	numberOfRs--;
+        }
+        return singleMinutesRow.toString();
+	}
 //	public String convertTime(String time) {
 //		int[] timeRows = Stream.of(time.split(":")).mapToInt(Integer::parseInt).toArray();
 //		int hoursRow = timeRows[0];
