@@ -5,6 +5,6 @@ import java.util.Arrays;
 public class Main {
 	public static void main(String[] args) {
 		DigitalToBerlinTimeConverter converter = new DigitalToBerlinTimeConverter();
-		System.out.println(converter.convertSingleMinutesRow("23:33:59"));
+		System.out.println(converter.convertFiveMinutesRow(35));
 	}
 }
