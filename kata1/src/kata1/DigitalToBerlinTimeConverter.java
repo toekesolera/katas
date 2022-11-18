@@ -67,7 +67,7 @@ public class DigitalToBerlinTimeConverter {
 	public String convertSecondsRow(int secondsRow) {
 		return (secondsRow % 2 == 0) ? "Y" : "O";
 	}
-	public String convertTime(String time) {
+	public String convertTimeToBerlin(String time) {
 		int[] timeRows = Stream.of(time.split(":")).mapToInt(Integer::parseInt).toArray();
 		int hoursRow = timeRows[0];
 		int minutesRow = timeRows[1];
