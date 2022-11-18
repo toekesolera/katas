@@ -1,6 +1,7 @@
 package kata;
 
 public class RomanConverter {
+	
 	public String convertNumberToRoman(int number) {
 		StringBuilder romanNumeral = new StringBuilder();
 		while (number > 1000) {
@@ -72,5 +73,34 @@ public class RomanConverter {
 		}
 		
 		return romanNumeral.toString();
+	}
+	
+	public int basicRomanToNumber(char numeral) {
+		if (numeral == 'M') return 1000;
+		if (numeral == 'D') return 500;
+		if (numeral == 'C') return 100;
+		if (numeral == 'L') return 50;
+		if (numeral == 'X') return 10;
+		if (numeral == 'V') return 5;
+		if (numeral == 'I') return 1;
+		return 0;
+	}
+	
+	public int convertRomanToNumber(String romanNumeral) {
+		char[] romanArray = romanNumeral.toCharArray();
+		int[] basicConvertedArray = new int[romanArray.length];
+		for (int i = 0; i < romanArray.length; i++) {
+			basicConvertedArray[i] = basicRomanToNumber(romanArray[i]);
+		}
+		int number = 0;
+		for (int i = 0; i < basicConvertedArray.length; i++) {
+			if (i < basicConvertedArray.length - 1 && 
+					basicConvertedArray[i] < basicConvertedArray[i+1]) {
+					number -= basicConvertedArray[i];
+				} else {
+					number += basicConvertedArray[i];
+				}
+			}
+		return number;
 	}
 }
