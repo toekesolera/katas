@@ -63,15 +63,24 @@ public class DigitalToBerlinTimeConverter {
         }
         return singleMinutesRow.toString();
 	}
-//	public String convertTime(String time) {
-//		int[] timeRows = Stream.of(time.split(":")).mapToInt(Integer::parseInt).toArray();
-//		int hoursRow = timeRows[0];
-//		int minutesRow = timeRows[1];
-//		int secondsRow = timeRows[2];
-//		convertSingleMinutesRow(minutesRow);
-//		String convertedTime;
-//		return convertedTime;
-//	}
+	
+	public String convertSecondsRow(int secondsRow) {
+		return (secondsRow % 2 == 0) ? "Y" : "O";
+	}
+	public String convertTime(String time) {
+		int[] timeRows = Stream.of(time.split(":")).mapToInt(Integer::parseInt).toArray();
+		int hoursRow = timeRows[0];
+		int minutesRow = timeRows[1];
+		int secondsRow = timeRows[2];
+		StringBuilder convertedTime = new StringBuilder();
+		convertedTime.append(convertSecondsRow(secondsRow));
+		convertedTime.append(convertFiveHoursRow(hoursRow));
+		convertedTime.append(convertSingleHoursRow(hoursRow));
+		convertedTime.append(convertFiveMinutesRow(minutesRow));
+		convertedTime.append(convertSingleMinutesRow(minutesRow));
+		
+		return convertedTime.toString();
+	}
 	
 
 }
