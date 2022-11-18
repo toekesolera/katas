@@ -6,5 +6,5 @@
 
 ## Alexandru-Robert Cotofan
 
-_### alexandru0cotofan@gmail.com / alexandru.cotofan@solera.com
-### toekesrl@gmail.com / teodor.samoila@solera.com_
+### alexandru0cotofan@gmail.com / alexandru.cotofan@solera.com
+### toekesrl@gmail.com / teodor.samoila@solera.com
