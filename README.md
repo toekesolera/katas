@@ -1,11 +1,10 @@
-# katas
-solera katas
+# SOLERA - KATAS AND BUG HUNTING
 
-contributors:
+# contributors:
 
-Teodor Samoila
+## Teodor Samoila
 
-Alexandru-Robert Cotofan
+## Alexandru-Robert Cotofan
 
-alexandru0cotofan@gmail.com / alexandru.cotofan@solera.com
-toekesrl@gmail.com / teodor.samoila@solera.com
+### alexandru0cotofan@gmail.com / alexandru.cotofan@solera.com
+### toekesrl@gmail.com / teodor.samoila@solera.com
