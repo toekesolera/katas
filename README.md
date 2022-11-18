@@ -1,6 +1,6 @@
 # SOLERA - KATAS AND BUG HUNTING
 
-# contributors:
+# **Contributors:**
 
 ## Teodor Samoila
 
